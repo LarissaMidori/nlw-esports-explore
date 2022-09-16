@@ -1,7 +1,83 @@
+* {
+  box-sizing: border-box; /* o box-sizing faz com que se colocar um padding ou margin, ele não some o valores e sim se adapte com o valor max de uma div por exemplo*/
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
 body {
   background-color: #121214;
   background-image: url(./assets/bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% auto;
+}
+
+ /*mostra bordas em todos os elementos dentro de main 
+main * {
+  border: 1px solid #fff;
+}
+*/
+
+main {
+  /*border: 3px solid #f00;*/
+  display:flex;
+  flex-direction: column;
+  gap:24px;
+  margin: auto;
+  margin-top:32px;
+  max-width: 580px;
+  width: 90%;
+}
+
+section {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  border-radius: 10px;
+  color: #fff;
+  padding-top: 4px;
+}
+
+section div {
+  background-color: #2A2634;
+  border-radius: 8px;
+  padding: 24px 32px 32px 32px;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  color: #A1A1AA;
+  letter-spacing: -0.18px;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.games-list img {
+  border-radius: 8px;
+  width: 90px;
+}
+
+.channel-list img {
+  border-radius:50%;
+  width: 70px;
+}
+
+.channel-list #rocket {
+  border: 2px solid #ccc;
+  border-radius:50%;
 }
