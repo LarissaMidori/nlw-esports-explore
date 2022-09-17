@@ -21,6 +21,32 @@ body {
   background-size: 100% auto;
 }
 
+header {
+  height: calc(120px + 32px);
+  padding-top: 32px;
+}
+
+header div {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  padding:4px;
+  width: 120px;
+
+  transition: transform .3s;
+
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  border-radius: 50%;
+  width: 100%; /* pega 100% do tamanho do width da div que está no header */
+}
+
  /*mostra bordas em todos os elementos dentro de main 
 main * {
   border: 1px solid #fff;
@@ -32,8 +58,7 @@ main {
   display:flex;
   flex-direction: column;
   gap:24px;
-  margin: auto;
-  margin-top:32px;
+  margin: 32px auto;
   max-width: 580px;
   width: 90%;
 }
@@ -67,17 +92,67 @@ section ul {
   margin-top: 24px;
 }
 
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
 .games-list img {
   border-radius: 8px;
   width: 90px;
 }
 
 .channel-list img {
+  border: 1px solid #443E54;
   border-radius:50%;
   width: 70px;
 }
 
-.channel-list #rocket {
-  border: 2px solid #ccc;
-  border-radius:50%;
+/* Animation */
+
+header div {
+  animation: fromTop .7s .2s backwards;
+}
+
+main section {
+  animation: fromLeft .7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+  animation-delay: .8s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fromLeft{
+  from {
+    opacity: 0;
+    transform: translateX(-30px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
 }
